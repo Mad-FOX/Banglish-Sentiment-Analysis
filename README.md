@@ -1,13 +1,17 @@
 # Banglish-Sentiment-Analysis
-Sentiment analysis for phonetic Bengali sentences.
+## Sentiment analysis for phonetic Bengali sentences.
 ---------------------------------------------------
 
-Our working principle was:
+### Our steps are:
+
 Module 1: Bengali Phonetic/Banglish -> Bengali. Ex: “ami valo achi” to “আমি ভাল আছি”
+
 Module 2: Bangla -> English. Ex: “আমি ভাল আছি” to “I am fine”
+
 Module 3: English -> Sentimental Analysis: Ex: “I am fine” to “positive: 100% negative 0%”
 
-For Module 1 (Bengali Phonetic/Banglish -> Bengali):
+### Module 1 (Bengali Phonetic/Banglish -> Bengali):
+
 At first, we used avro for python that was in pyavrophonetics library,sourced from github.
 https://github.com/omicronlab/pyAvroPhonetic/
 PyAvroPhonetic is a implementation of popular avro keyboard’s bangla phonetic in Python.
@@ -17,7 +21,8 @@ In order to get Bangla text from a Banglish Text, first we need to import the av
 pyavrophonetic package. Then we can parse any text using avro.parse() method.
 Example: avro.parse(‘ami banglay gan gai’)
 
-For Module 2 (Bengali -> English):
+### Module 2 (Bengali -> English):
+
 For this module, we undertook two approaches that we thought will be efficient to get English
 Translation.
 1. Web Scrapping using Python.
@@ -38,7 +43,8 @@ package that we’ve got substantially better result while translation Bangla to
 translation procedure takes much less time.
 sample code: TextBlob(avro.parse(‘ami valo achi’)).translate(to='en’)
 
-For Module 3 (English -> Sentiment Analysis):
+### Module 3 (English -> Sentiment Analysis):
+
 Packages Used:
 1. TextBlob
 2. Vader
@@ -52,7 +58,8 @@ sentiment. There are four sentiment outputs that are: positive, negative, neutra
 also manually provide a threshold for a text to be positive and negative.
 Now, we want to improve this prototype for better performance in an effective way with accuracy.
 
-Key Findings in our Analysis:
+### Key Findings in our Analysis:
+
 1. Although Avro is the dominant bangla phonetic generator, it cant parse banglish text with 100%
 efficiency. i.e ‘ korte’ ‘করতে’ ‘ekta’’একতা’
 2. Translating through webscrapping is a slow and error-prone process.
