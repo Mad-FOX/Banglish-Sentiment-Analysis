@@ -61,7 +61,7 @@ Now, we want to improve this prototype for better performance in an effective wa
 ### Key Findings in our Analysis:
 
 1. Although Avro is the dominant bangla phonetic generator, it cant parse banglish text with 100%
-efficiency. i.e ‘ korte’ ‘করতে’ ‘ekta’’একতা’
+efficiency. i.e ‘ korte’ -> ‘করতে’ ‘ekta’ -> ’একতা’
 2. Translating through webscrapping is a slow and error-prone process.
 3. TextBlob’s main purpose was to analyse the input text to extract the sentiment. But it is poor in
 analyzing sentiment.
