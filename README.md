@@ -73,5 +73,5 @@ Bengali to English.
 normalize the input text or improve the avro phonetic library.
 
 --------------------------------------------------------------
-Initial expermentation conducted by:
+Initial experimentation conducted by:
 Avijit Bhattacharjee (KU-140212), Imran Hossain (KU-140231), Subrato Sarker (KU-140236)
